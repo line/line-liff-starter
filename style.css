@@ -1,0 +1,45 @@
+
+html{
+    font-size: 11px;
+}
+
+table {
+    width: 100%;
+    table-layout:fixed;
+    word-break: break-all;
+}
+
+.div{
+    max-width: 100%;
+    text-align: center;
+}
+
+#profilepicturediv {
+    text-align: center;
+}
+
+img { 
+    max-width: 25%; 
+    height: auto; 
+}
+
+#profileimagediv{
+    height: 100px;
+    width: 100px;
+}
+
+#contextinfo {
+    display: none
+}
+
+#profileinfo {
+    display: none
+}
+
+.buttongroup{
+    text-align: center;
+}
+
+button {
+    margin: 4px;
+}
