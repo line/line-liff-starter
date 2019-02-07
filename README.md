@@ -39,6 +39,7 @@ To open the LIFF app within the LINE app, follow the steps below.
 
     - Open Window: Opens `https://line.me` in the in-app browser of the LINE app.
     - Close Window: Closes the LIFF app.
+    - Get Access Token: Gets the current user's access token.
     - Get Profile: Gets the current user's profile.
     - Send Messages: Sends a sample message on behalf of the user if the LIFF app is opened in the chat screen.
 

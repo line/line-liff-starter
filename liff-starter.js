@@ -40,17 +40,24 @@ function initializeApp(data) {
         });
     });
 
-    //get profile call
+    // get access token
+    document.getElementById('getaccesstoken').addEventListener('click', function () {
+        const accessToken = liff.getAccessToken();
+        document.getElementById('accesstokenfield').textContent = accessToken;
+        toggleAccessToken();
+    });
+
+    // get profile call
     document.getElementById('getprofilebutton').addEventListener('click', function () {
         liff.getProfile().then(function (profile) {
             document.getElementById('useridprofilefield').textContent = profile.userId;
             document.getElementById('displaynamefield').textContent = profile.displayName;
 
-            var profilePictureDiv = document.getElementById('profilepicturediv');
+            const profilePictureDiv = document.getElementById('profilepicturediv');
             if (profilePictureDiv.firstElementChild) {
                 profilePictureDiv.removeChild(profilePictureDiv.firstElementChild);
             }
-            var img = document.createElement('img');
+            const img = document.createElement('img');
             img.src = profile.pictureUrl;
             img.alt = "Profile Picture";
             profilePictureDiv.appendChild(img);
@@ -63,8 +70,16 @@ function initializeApp(data) {
     });
 }
 
+function toggleAccessToken() {
+    toggleElement('accesstokendata');
+}
+
 function toggleProfileData() {
-    var elem = document.getElementById('profileinfo');
+    toggleElement('profileinfo');
+}
+
+function toggleElement(elementId) {
+    const elem = document.getElementById(elementId);
     if (elem.offsetWidth > 0 && elem.offsetHeight > 0) {
         elem.style.display = "none";
     } else {

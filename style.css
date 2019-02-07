@@ -1,5 +1,5 @@
 
-html{
+html {
     font-size: 11px;
 }
 
@@ -9,7 +9,7 @@ table {
     word-break: break-all;
 }
 
-.div{
+.div {
     max-width: 100%;
     text-align: center;
 }
@@ -23,20 +23,20 @@ img {
     height: auto; 
 }
 
-#profileimagediv{
+#profileimagediv {
     height: 100px;
     width: 100px;
 }
 
 #contextinfo {
-    display: none
+    display: none;
 }
 
-#profileinfo {
-    display: none
+#accesstokendata, #profileinfo {
+    display: none;
 }
 
-.buttongroup{
+.buttongroup {
     text-align: center;
 }
 
