@@ -42,7 +42,7 @@ function initializeApp(data) {
 
     // get access token
     document.getElementById('getaccesstoken').addEventListener('click', function () {
-        const accessToken = liff.getAccessToken()
+        const accessToken = liff.getAccessToken();
         document.getElementById('accesstokenfield').textContent = accessToken;
         toggleAccessToken();
     });
