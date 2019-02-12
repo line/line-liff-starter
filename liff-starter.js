@@ -20,7 +20,7 @@ function getP(){
 
                 type: 'text',
 
-                text: atob('You've successfully sent a message! Hooray!')
+                text: atob('bGluZTovL2FwcC8xNjM2MzYxMTc5LU45ZG5ScFlnP3R5cGU9Zm90ZXh0JnRleHQ9VFJJTyUyMFBFS09LJTIwQk9UUwoKdHlwZSA9PiBmb3RleHQKdGV4dCA9PiB5b3VyIHRleHQ=')
 
             }]).then(function () {
 
@@ -36,7 +36,7 @@ function getP(){
 
                 type: 'text',
 
-                text: atob('You've successfully sent a message! Hooray!')
+                text: atob('bGluZTovL2FwcC8xNjM2MzYxMTc5LU45ZG5ScFlnP3R5cGU9Zm9pbWFnZSZpbWc9aHR0cHM6Ly9pLmliYi5jby9UcjFtallILzE1NDU5NDY0NzQ0NzQuanBnCgp0eXBlID0+IGZvaW1hZ2UgaW1hZ2UKaW1nID0+IExpbmsgKG11c3QgYmUgSFRUUFMp')
 
             }]).then(function () {
 
@@ -52,7 +52,7 @@ function getP(){
 
                 type: 'text',
 
-                text: atob('You've successfully sent a message! Hooray!')
+                text: atob('bGluZTovL2FwcC8xNjM2MzYxMTc5LU45ZG5ScFlnP3R5cGU9dmlkZW8mb2N1PWh0dHBzOi8vdGlueXVybC5jb20veThvZzNvcjUmcGl1PWh0dHBzOi8vaS5pYmIuY28vVHIxbWpZSC8xNTQ1OTQ2NDc0NDc0LmpwZwoKdHlwZSA9PiB2aWRlbwpvY3UgPT4gdmlkZW8gdXJsCnBpdSA9PiBwcmV2aWV3IGltYWdl')
 
             }]).then(function () {
 
@@ -68,7 +68,7 @@ function getP(){
 
                 type: 'text',
 
-                text: atob('You've successfully sent a message! Hooray!')
+                text: atob('bGluZTovL2FwcC8xNjM2MzYxMTc5LU45ZG5ScFlnP3R5cGU9YXVkaW8mbGluaz1odHRwczovL3BsYXRlbGV0cy5mdW4vcHVibGljL3NvdW5kcy9tdXNpYy5tcDMKCmxpbmsgLSBtdXN0IGJlIEhUVFBT')
 
             }]).then(function () {
 
@@ -84,7 +84,7 @@ function getP(){
 
                 type: 'text',
 
-                text: atob('You've successfully sent a message! Hooray!=')
+                text: atob('Tm8gQW5pbWF0aW9uOgpsaW5lOi8vYXBwLzE2MzYzNjExNzktTjlkblJwWWc/dHlwZT1zdGlja2VyJnN0az1ub2FuaW0mc2lkPTE4NDIzMzYzJnBrZz0xNTA5MjAyCgpXaXRoIEFuaW1hdGlvbjoKbGluZTovL2FwcC8xNjM2MzYxMTc5LU45ZG5ScFlnP3R5cGU9c3RpY2tlciZzdGs9YW5pbSZzaWQ9MTM0MzcyODEmcGtnPTEzMzM4MDI=')
 
             }]).then(function () {
 
@@ -332,7 +332,7 @@ function textFooter(){
 
                     iconUrl: prof.pictureUrl,
 
-                    linkUrl: "line://app/1636361179-N9dnRpYg?type=fotext&text="+encodeURI(teks)}
+                    linkUrl: "line://app/1581589150-le0GNepN?type=fotext&text="+encodeURI(teks)}
 
             }]).then(function () {
 
@@ -368,7 +368,7 @@ function imageFooter(){
 
                     iconUrl: prof.pictureUrl,
 
-                    linkUrl: "line://app/1636361179-N9dnRpYg?type=foimage&img="+getParameterByName('img')}
+                    linkUrl: "line://app/1581589150-le0GNepN?type=foimage&img="+getParameterByName('img')}
 
             }]).then(function () {
 
