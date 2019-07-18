@@ -16,6 +16,12 @@ This is a small web application that demonstrates the basic functionality of the
 3. Select Deploy app and confirm that your app is successfully deployed.
 4. Record the app URL (https://{Heroku app name}.herokuapp.com). You will set this URL when you add the app to LIFF.
 
+[![Deploy to Azure](https://azuredeploy.net/deploybutton.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fhoisjp%2Fline-liff-starter%2Fmaster%2Fazuredeploy.json)
+
+1. Click the above "Deploy to Azure" button.
+2. Fill in the required information.
+
+
 ## Adding the starter app to LIFF
 
 Add the app to LIFF. For more information, see [Adding a LIFF app](https://developers.line.me/en/docs/liff/registering-liff-apps/).
