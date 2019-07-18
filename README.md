@@ -19,8 +19,13 @@ This is a small web application that demonstrates the basic functionality of the
 [![Deploy to Azure](https://azuredeploy.net/deploybutton.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fhoisjp%2Fline-liff-starter%2Fmaster%2Fazuredeploy.json)
 
 1. Click the above "Deploy to Azure" button.
-2. Fill in the required information.
-
+2. Fill in the required information on the "Custom deployment" page in Azure portal.
+3. BASIC
+    * Resource group: Select or Create new
+    * Location: Select one which is close to your location. e.g. (Asia Pacific) Japan East
+4. SETTINGS
+    * Web Site Name: Set your site name which will determine the URL (https://{websitename}.azurewebsites.net). You will set this URL when you add the app to LIFF.
+5. Click the "Purchase" button and confirm that your app is successfully deployed. (It won't cost any as long as you keep Sku App Svc Plan = F1 by default)
 
 ## Adding the starter app to LIFF
 
