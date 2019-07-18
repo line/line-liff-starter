@@ -5,11 +5,11 @@ This is a small web application that demonstrates the basic functionality of the
 ## Prerequisites
 * [A channel on the LINE Developers Console](https://developers.line.me/en/docs/liff/getting-started/) for your application.
 * [A channel access token](https://developers.line.me/en/docs/liff/getting-started/#preparing-channel-access-token)
-* A [Heroku account](https://www.heroku.com)
+* A [Heroku account](https://www.heroku.com) or [Azure account](https://azure.microsoft.com)
 
 ## Deploying the application
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/line/line-liff-starter)
+ [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/line/line-liff-starter)
 
 1. Click the above "Deploy to Heroku button".
 2. Fill in the required information on the "Create a New App" page in Heroku.
