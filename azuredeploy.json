@@ -1,0 +1,122 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "webSiteName": {
+            "type": "string",
+            "metadata": {
+                "description": "Web site name to define ***.azurewebsites.net . (need to be unique)"
+            }
+        },
+        "skuAppSvcPlan": {
+            "type": "string",
+            "allowedValues": [
+              "F1",
+              "D1",
+              "B1",
+              "S1"
+            ],
+            "defaultValue": "F1",
+            "metadata": {
+              "description": "The SKU of App Service Plan, Free F1 by default."
+            }
+        },
+        "repoUrl": {
+            "type": "string",
+            "defaultValue": "https://github.com/hoisjp/line-liff-starter"
+        },
+        "branch": {
+            "type": "string",
+            "defaultValue": "master"
+        }
+    },
+    "variables": {
+        "appSvcPlanName": "[concat('appSvcPlan-', parameters('webSiteName'))]"
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Web/serverfarms",
+            "apiVersion": "2018-02-01",
+            "kind": "app",
+            "name": "[variables('appSvcPlanName')]",
+            "location": "[resourceGroup().location]",
+            "sku": {
+                "name": "[parameters('skuAppSvcPlan')]"
+            },
+            "properties": {
+                "name": "[variables('appSvcPlanName')]"
+            }
+        },
+        {
+            "type": "Microsoft.Web/sites",
+            "apiVersion": "2018-11-01",
+            "name": "[parameters('webSiteName')]",
+            "location": "[resourceGroup().location]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms', variables('appSvcPlanName'))]"
+            ],
+            "kind": "app",
+            "properties": {
+                "enabled": true,
+                "hostNameSslStates": [
+                    {
+                        "name": "[concat(parameters('webSiteName'), '.azurewebsites.net')]",
+                        "sslState": "Disabled",
+                        "hostType": "Standard"
+                    },
+                    {
+                        "name": "[concat(parameters('webSiteName'), '.scm.azurewebsites.net')]",
+                        "sslState": "Disabled",
+                        "hostType": "Repository"
+                    }
+                ],
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appSvcPlanName'))]",
+                "reserved": false,
+                "scmSiteAlsoStopped": false,
+                "clientAffinityEnabled": true,
+                "clientCertEnabled": false,
+                "hostNamesDisabled": false,
+                "containerSize": 0,
+                "dailyMemoryTimeQuota": 0,
+                "httpsOnly": false
+            },
+            "resources": [
+                {
+                    "type": "sourcecontrols",
+                    "apiVersion": "2018-11-01",
+                    "name": "web",
+                    "dependsOn": [
+                        "[resourceId('Microsoft.Web/sites', parameters('webSiteName'))]",
+                        "[concat('Microsoft.Web/Sites/', parameters('webSiteName'), '/config/web')]"
+                    ],
+                    "properties": {
+                        "repoUrl" : "[parameters('repoUrl')]",
+                        "branch": "[parameters('branch')]"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Microsoft.Web/sites/config",
+            "apiVersion": "2018-11-01",
+            "name": "[concat(parameters('webSiteName'), '/web')]",
+            "location": "[resourceGroup().location]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('webSiteName'))]"
+            ],
+            "properties": {
+                "numberOfWorkers": 1,
+                "defaultDocuments": [
+                    "index.html",
+                    "index.php"
+                ],
+                "phpVersion": "7.3",
+                "localMySqlEnabled": false,
+                "http20Enabled": false,
+                "minTlsVersion": "1.2",
+                "ftpsState": "Disabled",
+                "reservedInstanceCount": 0
+            }
+        }
+    ]
+}
