@@ -1,3 +1,8 @@
+# ⚠️⚠️⚠️DEPRECATED⚠️⚠️⚠️
+
+This LIFF Starter App is designed only for LIFF v1, which is already discontinued.    
+From now on, please check [the latest version of LIFF Starter App](https://github.com/line/line-liff-v2-starter) instead.
+
 # LIFF Starter App
 
 This is a small web application that demonstrates the basic functionality of the [LINE Front-end Framework (LIFF)](https://developers.line.me/en/docs/liff/overview/). 
