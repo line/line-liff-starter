@@ -1,3 +1,7 @@
+# ⚠️ This repository is no longer active
+
+This repository is no longer actively maintained. Please refer [line/line-liff-v2-starter](https://github.com/line/line-liff-v2-starter) for this repository successor.
+
 # LIFF Starter App
 
 This is a small web application that demonstrates the basic functionality of the [LINE Front-end Framework (LIFF)](https://developers.line.me/en/docs/liff/overview/). 
